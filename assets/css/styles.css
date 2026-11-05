@@ -250,35 +250,18 @@ h1, h2, h3, h4 {
   gap: 0.9rem;
 }
 
-.brand-emblem-3d {
+.brand-logo-svg {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #182238 0%, #0c1220 100%);
-  border: 1.5px solid var(--gold-primary);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 
-    0 8px 20px -4px rgba(0, 0, 0, 0.6),
-    0 0 12px var(--gold-glow),
-    inset 0 1px 1px rgba(255, 255, 255, 0.3);
-  transform: perspective(600px) rotateX(8deg) rotateY(-8deg);
-  transition: transform 0.4s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 10px rgba(232, 160, 32, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
 }
 
-.brand-block:hover .brand-emblem-3d {
-  transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(1.05);
-}
-
-.brand-emblem-text {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.brand-block:hover .brand-logo-svg {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 16px rgba(232, 160, 32, 0.45);
 }
 
 .brand-info {
@@ -289,15 +272,16 @@ h1, h2, h3, h4 {
 .brand-title {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
-.brand-legal {
+.brand-rc {
   font-size: 0.72rem;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: var(--gold-primary);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1093,3 +1077,362 @@ h1, h2, h3, h4 {
   font-size: 0.82rem;
   color: var(--text-muted);
 }
+
+/* ==========================================================================
+   Service Watermarks & Corporate Security Textures
+   ========================================================================== */
+.section-with-watermark {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark-backdrop {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  font-family: var(--font-sans);
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.022);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  text-transform: uppercase;
+}
+
+.watermark-seal {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.038;
+  z-index: 0;
+}
+
+.card-watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -10px;
+  font-family: var(--font-sans);
+  font-size: 2.75rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: rgba(201, 164, 97, 0.045);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 0;
+  transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.service-card-3d:hover .card-watermark {
+  color: rgba(201, 164, 97, 0.1);
+  transform: translateY(-4px);
+}
+
+.watermark-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(201, 164, 97, 0.08);
+  border: 1px dashed rgba(201, 164, 97, 0.32);
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   Pictorial Visual Elements
+   ========================================================================== */
+.hero-pictorial-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 60px -15px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(201, 164, 97, 0.18);
+  border: 1.5px solid var(--border-gold);
+  background: #0a0f1b;
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.hero-pictorial-container:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.01);
+  box-shadow: 
+    0 35px 80px -15px rgba(0, 0, 0, 0.9),
+    0 0 45px rgba(201, 164, 97, 0.25);
+}
+
+.hero-pictorial-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.hero-pictorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(7, 9, 14, 0.15) 0%, 
+    rgba(7, 9, 14, 0.35) 45%, 
+    rgba(7, 9, 14, 0.94) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  pointer-events: none;
+}
+
+.hero-floating-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  pointer-events: auto;
+}
+
+.pictorial-glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(11, 17, 30, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gold);
+  border-radius: 9999px;
+  padding: 0.5rem 1.15rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pictorial-glass-pill .pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emerald-accent);
+  box-shadow: 0 0 8px var(--emerald-accent);
+}
+
+.pictorial-bottom-strip {
+  background: rgba(11, 17, 30, 0.9);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.pictorial-stat-num {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.pictorial-stat-lbl {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.25rem;
+}
+
+/* Practice Area Pictorial Diagram Banners */
+.service-diagram-wrap {
+  width: 100%;
+  height: 80px;
+  background: rgba(10, 16, 28, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.service-diagram-svg {
+  width: 90%;
+  height: 60px;
+  display: block;
+}
+
+/* Institutional Showcase Banner */
+.showcase-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 3.5rem;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .showcase-banner-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+.showcase-img-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.showcase-img-frame img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Dual Leadership Grid (Olayiwola Kola-Seriki & Owoyemi Nafiu Dayo)
+   ========================================================================== */
+.leadership-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 960px) {
+  .leadership-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partner-card-3d {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.partner-card-3d:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-gold);
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(201, 164, 97, 0.15);
+}
+
+.partner-card-top {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 540px) {
+  .partner-card-top {
+    flex-direction: column;
+  }
+}
+
+.partner-photo-frame {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+  background: #0f1626;
+}
+
+.partner-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.partner-title-block h3 {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.partner-role-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--gold-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.partner-credentials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+
+.partner-cred-chip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(201, 164, 97, 0.1);
+  border: 1px solid rgba(201, 164, 97, 0.25);
+  color: var(--gold-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.partner-bio {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.partner-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
