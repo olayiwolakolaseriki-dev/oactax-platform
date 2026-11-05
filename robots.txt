@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oactax.com.ng/sitemap.xml
