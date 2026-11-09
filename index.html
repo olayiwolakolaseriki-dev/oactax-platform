@@ -28,11 +28,10 @@
   <meta name="twitter:description" content="Strategic corporate tax, audit, and accounting services in Lagos, Nigeria. Founded by Olayiwola Kola-Seriki." />
   <meta name="twitter:image" content="https://oactax.com.ng/assets/images/author-portrait-1200.jpg" />
 
-  <!-- Critical Performance Preloads -->
+  <!-- Critical Performance Preloads (Immediate LCP Acceleration) -->
+  <link rel="preload" as="image" href="/assets/images/hero-corporate-consulting.webp" type="image/webp" fetchpriority="high" />
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/newsreader-600.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/plus-jakarta-sans-400.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/plus-jakarta-sans-600.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/plus-jakarta-sans-700.woff2" crossorigin />
   
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
@@ -196,7 +195,10 @@
 
           <!-- Right Column: Pictorial Corporate Design (Clean & Unobstructed) -->
           <div class="hero-pictorial-container">
-            <img src="/assets/images/hero-corporate-consulting.jpg" alt="OAC Tax &amp; Accounting Partner reviewing corporate tax architectures and financial ledgers in Lagos, Nigeria" class="hero-pictorial-img" />
+            <picture>
+              <source srcset="/assets/images/hero-corporate-consulting.webp" type="image/webp" />
+              <img src="/assets/images/hero-corporate-consulting.jpg" alt="OAC Tax &amp; Accounting Partner reviewing corporate tax architectures and financial ledgers in Lagos, Nigeria" class="hero-pictorial-img" width="1200" height="669" fetchpriority="high" loading="eager" decoding="async" />
+            </picture>
           </div>
 
         </div>
@@ -215,7 +217,7 @@
         <div class="marquee-track marquee-rtl">
           <!-- Item 1: Sweet Nutrition -->
           <div class="client-badge-3d">
-            <img src="/assets/images/client-sweet-nutrition.png" alt="Sweet Nutrition Ltd" class="client-badge-logo" />
+            <img src="/assets/images/client-sweet-nutrition.png" alt="Sweet Nutrition Ltd" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Sweet Nutrition Ltd</span>
               <span class="client-badge-sector">Manufacturing &middot; FMCG</span>
@@ -224,7 +226,7 @@
 
           <!-- Item 2: Vitafoam -->
           <div class="client-badge-3d">
-            <img src="/assets/images/client-vitafoam.png" alt="Vitafoam Nigeria Plc" class="client-badge-logo" />
+            <img src="/assets/images/client-vitafoam.png" alt="Vitafoam Nigeria Plc" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Vitafoam Nigeria Plc</span>
               <span class="client-badge-sector">Industrial Manufacturing</span>
@@ -233,7 +235,7 @@
 
           <!-- Item 3: Simba Group -->
           <div class="client-badge-3d">
-            <img src="/assets/images/client-simba.jpg" alt="Simba Group" class="client-badge-logo" />
+            <img src="/assets/images/client-simba.jpg" alt="Simba Group" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Simba Group</span>
               <span class="client-badge-sector">Automotive &middot; Distribution</span>
@@ -242,7 +244,7 @@
 
           <!-- Item 4: Plateau State -->
           <div class="client-badge-3d">
-            <img src="/assets/images/client-plateau-state.svg" alt="Plateau State Government" class="client-badge-logo" style="height: 36px;" />
+            <img src="/assets/images/client-plateau-state.svg" alt="Plateau State Government" class="client-badge-logo" style="height: 36px;" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Plateau State Gov</span>
               <span class="client-badge-sector">Public Sector &middot; Fiscal Advisory</span>
@@ -273,28 +275,28 @@
 
           <!-- Duplicate Set for Seamless Infinite Loop -->
           <div class="client-badge-3d">
-            <img src="/assets/images/client-sweet-nutrition.png" alt="Sweet Nutrition Ltd" class="client-badge-logo" />
+            <img src="/assets/images/client-sweet-nutrition.png" alt="Sweet Nutrition Ltd" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Sweet Nutrition Ltd</span>
               <span class="client-badge-sector">Manufacturing &middot; FMCG</span>
             </div>
           </div>
           <div class="client-badge-3d">
-            <img src="/assets/images/client-vitafoam.png" alt="Vitafoam Nigeria Plc" class="client-badge-logo" />
+            <img src="/assets/images/client-vitafoam.png" alt="Vitafoam Nigeria Plc" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Vitafoam Nigeria Plc</span>
               <span class="client-badge-sector">Industrial Manufacturing</span>
             </div>
           </div>
           <div class="client-badge-3d">
-            <img src="/assets/images/client-simba.jpg" alt="Simba Group" class="client-badge-logo" />
+            <img src="/assets/images/client-simba.jpg" alt="Simba Group" class="client-badge-logo" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Simba Group</span>
               <span class="client-badge-sector">Automotive &middot; Distribution</span>
             </div>
           </div>
           <div class="client-badge-3d">
-            <img src="/assets/images/client-plateau-state.svg" alt="Plateau State Government" class="client-badge-logo" style="height: 36px;" />
+            <img src="/assets/images/client-plateau-state.svg" alt="Plateau State Government" class="client-badge-logo" style="height: 36px;" loading="lazy" decoding="async" />
             <div class="client-badge-meta">
               <span class="client-badge-name">Plateau State Gov</span>
               <span class="client-badge-sector">Public Sector &middot; Fiscal Advisory</span>
@@ -657,7 +659,10 @@
         <!-- Institutional Showcase Banner (Pictorial Corporate Photography) -->
         <div class="showcase-banner-grid">
           <div class="showcase-img-frame">
-            <img src="/assets/images/audit-governance-boardroom.jpg" alt="OAC Tax &amp; Accounting Partners analyzing audited financial balance sheets in Lagos boardroom" />
+            <picture>
+              <source srcset="/assets/images/audit-governance-boardroom.webp" type="image/webp" />
+              <img src="/assets/images/audit-governance-boardroom.jpg" alt="OAC Tax &amp; Accounting Partners analyzing audited financial balance sheets in Lagos boardroom" loading="lazy" decoding="async" width="1200" height="675" />
+            </picture>
           </div>
           <div>
             <div class="watermark-stamp">
@@ -752,7 +757,7 @@
             <div>
               <div class="partner-card-top">
                 <div class="partner-photo-frame">
-                  <img src="/assets/images/partner-layi-original.jpg" alt="Olayiwola 'Layi' Kola-Seriki - Founding Partner &amp; Lead Finance Expert" />
+                  <img src="/assets/images/partner-layi-original.jpg" alt="Olayiwola 'Layi' Kola-Seriki - Founding Partner &amp; Lead Finance Expert" loading="lazy" decoding="async" width="80" height="80" />
                 </div>
                 <div class="partner-title-block">
                   <span class="partner-role-tag">Founding Partner &middot; Lead Finance Expert</span>
@@ -787,7 +792,7 @@
             <div>
               <div class="partner-card-top">
                 <div class="partner-photo-frame">
-                  <img src="/assets/images/partner-nafiu-owoyemi.jpg" alt="Owoyemi Nafiu Dayo - Partner &amp; Finance Expert" />
+                  <img src="/assets/images/partner-nafiu-owoyemi.jpg" alt="Owoyemi Nafiu Dayo - Partner &amp; Finance Expert" loading="lazy" decoding="async" width="80" height="80" />
                 </div>
                 <div class="partner-title-block">
                   <span class="partner-role-tag">Partner &middot; Finance Expert</span>
